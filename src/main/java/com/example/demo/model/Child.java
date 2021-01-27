@@ -21,6 +21,14 @@ public class Child {
     @ManyToMany
     private List<Teacher> teacher;
 
+    public Child() {
+    }
+
+    public Child(String lastName, String firstName) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -91,5 +99,19 @@ public class Child {
     public Child setTeacher(List<Teacher> teacher) {
         this.teacher = teacher;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Child{" +
+                "id=" + id +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", age=" + age +
+                ", channel=" + channel +
+                ", parent=" + parent +
+                ", admin=" + admin +
+                ", teacher=" + teacher +
+                '}';
     }
 }

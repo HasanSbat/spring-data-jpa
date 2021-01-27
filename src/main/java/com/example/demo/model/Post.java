@@ -18,7 +18,13 @@ public class Post {
     private Parent parent;
     private Date date;
     private String postContent;
-    @OneToMany
+
+    public Post() {
+    }
+
+    public Post(String postContent) {
+        this.postContent = postContent;
+    }
 
     public Integer getId() {
         return id;
@@ -81,5 +87,18 @@ public class Post {
     public Post setPostContent(String postContent) {
         this.postContent = postContent;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", admin=" + admin +
+                ", channel=" + channel +
+                ", teacher=" + teacher +
+                ", parent=" + parent +
+                ", date=" + date +
+                ", postContent='" + postContent + '\'' +
+                '}';
     }
 }

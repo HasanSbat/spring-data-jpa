@@ -21,6 +21,8 @@ public class Admin {
     @OneToMany
     private List<Child> child;
 
+    public Admin() {
+    }
     public Admin(String fullName , String password) {
         this.fullName = fullName;
         this.password = password;
@@ -94,5 +96,19 @@ public class Admin {
     public Admin setChild(List<Child> child) {
         this.child = child;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", password='" + password + '\'' +
+                ", messages=" + messages +
+                ", channel=" + channel +
+                ", posts=" + posts +
+                ", parent=" + parent +
+                ", child=" + child +
+                '}';
     }
 }

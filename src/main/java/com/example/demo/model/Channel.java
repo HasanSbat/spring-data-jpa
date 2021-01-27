@@ -10,7 +10,6 @@ public class Channel {
     private  Integer id;
     private String name;
     private String grade;
-
     @OneToMany
     private List<Child> children;
     @ManyToMany
@@ -21,6 +20,13 @@ public class Channel {
     private List<Admin> admins;
     @OneToMany
     private List<Post> posts;
+
+    public Channel() {
+    }
+
+    public Channel(String name) {
+        this.name = name;
+    }
 
     public Integer getId() {
         return id;

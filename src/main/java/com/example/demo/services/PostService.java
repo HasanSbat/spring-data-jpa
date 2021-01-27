@@ -26,7 +26,8 @@ public class PostService {
         postRepository.findAll().forEach(post -> channelPosts.add(post));
         return channelPosts;
     }
-   // public List<Post> replyOnPost(){ } hoe kan ik deze scrijven??
+   // public List<Post> replyOnPost(){
+    // } hoe kan ik deze scrijven??
 
     public List<Post> getAllRepliesByPost(Post post){
     List<Post> repliesPosts = new ArrayList<>();

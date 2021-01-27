@@ -15,13 +15,13 @@ public class TeacherController {
     @Autowired
     private TeacherService teacherService;
 
-    @GetMapping("login")
+    @GetMapping("login-new-extra")
     public String login(Model model) {
         model.addAttribute("user", new Teacher("", ""));
         return "login";
     }
 
-    @PostMapping("login")
+    @PostMapping("login-new-extra")
     public String login2(@ModelAttribute("user") Teacher userReceived, HttpSession session){
         Teacher teacher = teacherService.getTeacherByPasswordAndFullName(userReceived.getFullName(), userReceived.getPassword());
         if(teacher!= null) {

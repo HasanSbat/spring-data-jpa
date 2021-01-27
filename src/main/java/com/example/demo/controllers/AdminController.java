@@ -16,12 +16,12 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
-    @GetMapping("login")
+    @GetMapping("loginAdmin")
     public String login(Model model){
         model.addAttribute("user", new Admin("",""));
         return "login";
     }
-    @PostMapping("login")
+    @PostMapping("loginAdmin")
     public String login2(@ModelAttribute("user") Admin userReceived, HttpSession session){
         Admin admin = adminService.getAdminByPasswordAndFullName(userReceived.getFullName(), userReceived.getPassword());
         if(admin!= null) {

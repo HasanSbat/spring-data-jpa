@@ -17,7 +17,7 @@ public class ParentService {
     public void addParent(Parent parent){
      parentRepository.save(parent);
     }
-    public void editMessage(Parent parent, Integer id){
+    public void editParent(Parent parent, Integer id){
         Parent newParent= parentRepository.findById(id).get();
         newParent.setId(id);
         parentRepository.save(newParent);

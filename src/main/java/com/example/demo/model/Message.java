@@ -20,6 +20,13 @@ public class Message {
     @ManyToOne
     private Admin admin;
 
+    public Message() {
+    }
+
+    public Message(String text) {
+        this.text = text;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -72,5 +79,17 @@ public class Message {
     public Message setAdmin(Admin admin) {
         this.admin = admin;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", parent=" + parent +
+                ", teacher=" + teacher +
+                ", text='" + text + '\'' +
+                ", date=" + date +
+                ", admin=" + admin +
+                '}';
     }
 }

@@ -11,7 +11,7 @@ public class ChildController {
     @Autowired
     private ChildService childService;
 
-        @GetMapping("/Children")
+        @GetMapping("/children")
     public String getChildren(Model model){
         model.addAttribute("children" , childService.getAllChildren());
     return "child";

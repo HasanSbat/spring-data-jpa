@@ -20,6 +20,15 @@ public class Teacher {
     @ManyToMany
     private List<Child> child;
 
+    public Teacher() {
+    }
+
+    public Teacher(String fullName, String password, String course) {
+        this.fullName = fullName;
+        this.password = password;
+        this.course = course;
+    }
+
     public Teacher(String fullName, String password) {
         this.fullName = fullName;
         this.password = password;
@@ -93,5 +102,19 @@ public class Teacher {
     public Teacher setChild(List<Child> child) {
         this.child = child;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", password='" + password + '\'' +
+                ", course='" + course + '\'' +
+                ", channel=" + channel +
+                ", messages=" + messages +
+                ", posts=" + posts +
+                ", child=" + child +
+                '}';
     }
 }

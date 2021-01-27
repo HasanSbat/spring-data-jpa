@@ -25,6 +25,9 @@ public class Parent {
     @ManyToOne
     private Admin admin;
 
+    public Parent() {
+    }
+
     public Parent(String fullName , String password) {
         this.fullName = fullName;
         this.password = password;
@@ -129,4 +132,20 @@ public class Parent {
         return this;
     }
 
+    @Override
+    public String toString() {
+        return "Parent{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", password='" + password + '\'' +
+                ", optionamlEtraPartner='" + optionamlEtraPartner + '\'' +
+                ", eMail='" + eMail + '\'' +
+                ", gsmNumber='" + gsmNumber + '\'' +
+                ", message=" + message +
+                ", child=" + child +
+                ", channel=" + channel +
+                ", posts=" + posts +
+                ", admin=" + admin +
+                '}';
+    }
 }

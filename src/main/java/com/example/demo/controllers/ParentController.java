@@ -18,7 +18,6 @@ public class ParentController {
 
     @GetMapping("login")
     public String login(Model model){
-        model.addAttribute("user", new Parent("",""));
         return "login";
     }
     @PostMapping("login")
